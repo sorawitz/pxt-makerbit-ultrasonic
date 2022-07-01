@@ -120,6 +120,8 @@ class VL53L0X:
             self.i2c = I2C(0, scl=Pin(21), sda=Pin(22), freq=400000)
         else:
             self.i2c = I2C(0, scl=Pin(22), sda=Pin(21), freq=400000)
+         else:
+            self.i2c = I2C(0, scl=Pin(19), sda=Pin(20), freq=400000)
         self.address = address
         self.init()
         self._started = False
